@@ -8,7 +8,7 @@ rules:
         action_parameters:
           value: HIGH
       LOW:
-        simple_condition: input.thank_you==True and input.business=="CLAIMS"
+        simple_condition: input.thanks==True and input.business=="claim"
         action: set_priority
         action_parameters:
           value: LOW     
@@ -19,7 +19,7 @@ rules:
           value: MEDIUM
     auto_reply:
       THANK_YOU:
-        simple_condition: input.thank_you==True and input.business=="SUBSCRIPTIONS"
+        simple_condition: input.thanks==True and input.business=="contracts"
         action: send_reply
         action_parameters:
           reply_id: THANK_U_4_YOUR_THANK_U
